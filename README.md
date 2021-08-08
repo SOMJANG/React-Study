@@ -7,3 +7,9 @@ React Study Repository
 
 ### DAY02
 #### babel-loader 오류 해결 - https://bit.ly/3dv5WO4
+
+### DAY03
+#### Class 연습
+
+### DAY04
+#### 화살표 함수 연습
