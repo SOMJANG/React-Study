@@ -123,3 +123,43 @@ var {one, ...theOthers} = others;
 console.log(one);
 console.log(theOthers);
 
+// 220214 Practice JS ES6
+var appleProductList = ["MacBook Pro", "iMac", "iPad Pro", "iPhone", "airPods"];
+var appleCareList = ["AppleCare", "AppleCare Plus"];
+
+var appleItemList = [appleProductList[0], appleProductList[1], appleProductList[2], appleProductList[3], appleProductList[4], appleCareList[0], appleCareList[1]];
+
+console.log(appleItemList);
+
+var appleAllItemList1 = [].concat(appleProductList, appleCareList);
+var appleAllItemList2 = [].concat(appleProductList, appleCareList, appleItemList);
+// concat 은 2개도 합쳐지고 3개도 합쳐집니다.
+
+console.log("appleAllItemList1");
+console.log(appleAllItemList1);
+console.log("appleAllItemList2");
+console.log(appleAllItemList2);
+
+var item1 = appleCareList[0];
+var item2 = appleCareList[1];
+var item3 = appleCareList[2];
+
+console.log(`item1 : ${item1} item2 : ${item2} item3 : ${item3}`);
+
+var item1 = appleCareList[0];
+var item2 = appleCareList[1];
+var item3 = appleCareList[2] || 'empty';
+
+console.log(`item1 : ${item1} item2 : ${item2} item3 : ${item3}`);
+
+function func() {
+    var args = Array.prototype.slice.call(arguments);
+    var first = args[0];
+    var others = args.slice(1, args.length);
+
+    console.log(`args ${args}`);
+    console.log(`first ${first}`);
+    console.log(`others ${others}`);
+};
+
+func(item1, item2, item3);
