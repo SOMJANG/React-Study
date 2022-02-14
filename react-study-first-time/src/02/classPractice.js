@@ -2,7 +2,7 @@
 // 기존 자바스크립트의 클래스 표현 방법
 
 function Shape(x, y) {
-    this.name = 'Shape';
+    this.name = 'Shape'; // ES7 의 문법 // 터미널에서는 오류가 나는 부분이므로 크롬 개발자 도구에서 테스트 필요
     this.move(x, y);
 }
 // 함수를 생성자(constructor) 형태로 선언
