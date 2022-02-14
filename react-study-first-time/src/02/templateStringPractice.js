@@ -75,3 +75,44 @@ var myCart = `장바구니에 ${cart.book_name}가 있습니다.
 총 금액은 ${getTotal(cart)}입니다.`;
 
 console.log(myCart);
+
+// 220214 Practice JS ES6
+var product1 = "맥북"
+var product2 = "아이폰"
+var product3 = "아이맥"
+
+var appleProductStr = "애플의 제품에는" + " " + product1 + ", " + product2 + ", " + product3 + "등 이 있습니다.";
+
+console.log(appleProductStr);
+
+var appleProductInfo = {mac: "맥북", iphone: "아이폰", imac: "아이맥"};
+
+var appleProductStr = "애플의 제품에는 " + appleProductInfo.mac + ", " + appleProductInfo.iphone + ", " + appleProductInfo.imac + "등 이 있습니다.";
+
+console.log(appleProductInfo);
+console.log(appleProductStr);
+
+var samsungProductInfo = {s22: "갤럭시S22", tab: "갤럭시탭", book: "갤럭시북"}
+
+var samsungProductStr = "삼성의 제품에는 " + samsungProductInfo.s22 + ", " + samsungProductInfo.tab + ", " + samsungProductInfo.book + "등 이 있습니다.";
+
+console.log(samsungProductStr);
+
+var isGalaxy = false;
+
+var productStr = (isGalaxy ? samsungProductStr : appleProductStr);
+
+console.log(productStr);
+
+isGalaxy = true;
+// 이렇게 isGalaxy를 true 로 바꾸었다고 해서
+
+// var product_list_str = (isGalaxy ? samsung_product_str : apple_product_str);
+
+console.log(productStr);
+// 여기서 삼성이 나오는 것은 아님.
+
+// Template 문자열로 바꾸는 작업해보기
+var appleProductTempStr = `애플의 제품에는${appleProductInfo.mac}, ${appleProductInfo.iphone}, ${appleProductInfo.imac} 등 이 있습니다.`;
+
+console.log(`템플릿 문자열로 변경한 결과\n${appleProductStr}`);
